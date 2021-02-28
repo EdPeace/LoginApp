@@ -1,6 +1,6 @@
 import NavBar from "./NavBar";
 
-function NavBarItems({label, uri}){
-    return(<li><a alt={label} href={uri}>{label}</a></li>);
+function NavBarItems({ label, uri }) {
+    return (<li><a alt={label} href={uri}>{label}</a></li>);
 }
 export default NavBarItems;

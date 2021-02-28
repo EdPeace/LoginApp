@@ -1,5 +1,5 @@
-function PillButton({type,text,click}){
-    var myClasses=[
+function PillButton({ type, text, click }) {
+    var myClasses = [
         "w-full",
         "flex",
         "items-center",
@@ -20,7 +20,7 @@ function PillButton({type,text,click}){
         "md:px-10",
         "my-2"
     ];
-    return(
+    return (
         <button className={myClasses.join(" ")} type={type} onClick={click}>{text}</button>
     );
 }
