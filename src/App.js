@@ -1,21 +1,34 @@
-import logo from './logo.svg';
+  
 import './App.css';
-import Cards from './components/Cards/Cards';
-import CardHolder from './components/Cards/CardHolder';
 import BrandHeader from './components/BrandHeader/BrandHeader';
-import Login from './components/Login/Login';
+import Login from './components/Pages/Login';
+import Home from './components/Pages/Home';
+import Todo from './components/Pages/Todo/Todo';
+
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import LoginPage from './components/Pages/Login';
 
 function App() {
-  var myClasses = ["text-center", "border", "border-gray-400", "bg-gradient-to-b", "from-green-200", "to-blue-300"];
+  
   return (
+    <Router>
     <section>
       <BrandHeader></BrandHeader>
-      <section className={myClasses.join(" ")}>
-        <Login></Login>
+      <section>
+      <Switch>
+          <Route path="/" exact>
+              <Home />
+          </Route>
+          <Route path="/todos" exact>
+            <Todo />
+          </Route>
+          <Route path="/login" exact>
+              <LoginPage></LoginPage>
+          </Route>
+        </Switch>
       </section>
-
-
     </section>
+    </Router>
   );
 }
 
